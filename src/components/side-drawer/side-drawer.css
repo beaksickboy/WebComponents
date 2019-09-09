@@ -1,0 +1,17 @@
+:host {
+  /**
+  * @prop --background: background color for side bar
+  * @prop --width: side drawer width
+  */
+  --background: red;
+  --width: 60vw;
+}
+
+#side-nav {
+  height: 100vh;
+  background: var(--background);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--width);
+}
