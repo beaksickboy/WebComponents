@@ -12,6 +12,13 @@
     <script nomodule src="/build/reusecomponents.js"></script>
   </head>
   <body>
-    <bsb-side-drawer></bsb-side-drawer>
+    <bsb-side-drawer id="side-drawer"></bsb-side-drawer>
+
+    <script>
+      const sideDrawer = document.querySelector('#side-drawer');
+      setInterval(() => {
+        sideDrawer.toggle()
+      }, 3000)
+    </script>
   </body>
 </html>

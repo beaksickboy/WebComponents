@@ -5,13 +5,30 @@
   */
   --background: red;
   --width: 60vw;
-}
-
-#side-nav {
   height: 100vh;
   background: var(--background);
   position: fixed;
   top: 0;
-  left: 0;
+  left: calc(-1 * var(--width)); /* shift element to left */
   width: var(--width);
 }
+
+:host([opened]) {
+  transform: translateX(var(--width));
+  transition: transform 200ms linear;
+  will-change: transform;
+}
+
+:host(:not([opened])) {
+  transform: translateX(-500px);
+  transition: transform 200ms linear;
+  will-change: transform;
+}
+
+
+
+
+
+
+
+

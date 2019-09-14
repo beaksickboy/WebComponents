@@ -9,7 +9,10 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface BsbSideDrawer {}
+  interface BsbSideDrawer {
+    'opened': boolean;
+    'toggle': () => Promise<void>;
+  }
 }
 
 declare global {
@@ -26,7 +29,9 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface BsbSideDrawer extends JSXBase.HTMLAttributes<HTMLBsbSideDrawerElement> {}
+  interface BsbSideDrawer extends JSXBase.HTMLAttributes<HTMLBsbSideDrawerElement> {
+    'opened'?: boolean;
+  }
 
   interface IntrinsicElements {
     'bsb-side-drawer': BsbSideDrawer;
